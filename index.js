@@ -1,12 +1,13 @@
-const Engineer = require("./Engineer");
-const Intern = require("./Intern");
-const Manager = require("./Manager");
+//requirements
+const inquirer = require('inquirer');
+const http = require('http');
+const fs = require('fs');
+const port = 3001;
 
-module.export = ("Engineer, Intern, Manager, Employee");
+// the files
+const {Employee, Intern, Engineer, Manager} = require('./Lib/Index')
 
-const {Manager, Engineer, Intern, Employee} = require('./Lib')
-
-//questions
+// list of questions
 const questions = [
     {
         type: 'input',
@@ -88,6 +89,7 @@ function addEmployee() {
     inquirer.promt(questions)
     .then(function(answer) {
         console.log(answers);
+        useranswer.push(answer)
     })
 };
 
