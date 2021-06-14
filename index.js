@@ -86,10 +86,10 @@ const questions = [
 //functions to create roles
 //prompt
 function addEmployee() {
-    inquirer.promt(questions)
+    inquirer.prompt(questions)
     .then(function(answer) {
         console.log(answers);
-        useranswer.push(answer)
+        userAnswer.push(answer)
     })
 };
 
@@ -98,4 +98,4 @@ function addEmployee() {
 //interns
 //HTML page
 
-addEmloyee();
+addEmployee();
